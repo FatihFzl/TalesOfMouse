@@ -1,0 +1,87 @@
+newmtl blinn1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TilingTextureColoring_Wall_CLR.tga
+bump TilingTextureColoring_Wall_NORM.tga -bm 1
+Ni 1.00
+Ks 0.10 0.10 0.10
+newmtl blinn2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TilingTextureColoring_Floor_CLR.tga
+bump TilingTextureColoring_Floor_NORM.tga -bm 1
+Ni 1.00
+Ks 0.04 0.04 0.04
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd LP_ModularBeans_CLR.tga
+bump LP_ModularBeans_XNM_normals.tga -bm 1
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TilingTextureColoring_Wood_CLR.tga
+bump TilingTextureColoring_Wood_NORM.tga -bm 1
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 16_BuildingMaya_Props_CLR.tga
+bump 16_BuildingMaya_Props_NORM.tga -bm 1
+Ni 1.00
+newmtl phong3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.75 0.75 0.75
+Tf 1.00 1.00 1.00
+map_Kd LP_Pillar_diffuse.tga
+bump LP_Pillar_normals.tga -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl phong4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Door_CLR.tga
+bump Door_NM.tga -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl phong5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd LP_Chains_CLR.tga
+bump LP_Chains_normals.tga -bm 1
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl sceneCombined_OBJ:phong4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 16_BuildingMaya_Props_CLR.tga
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
