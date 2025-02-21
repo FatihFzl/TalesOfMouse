@@ -5,27 +5,22 @@ using UnityEngine;
 
 public class ArrowCollision : MonoBehaviour
 {
-    private string _targetTag;
-    private GameObject _cubeEnemyObject;
-    private CubeEnemy _cubeEnemy;
-    
-    private void Start()
-    {
-        _targetTag = "Enemy";
-        
-        _cubeEnemyObject= GameObject.FindGameObjectWithTag(_targetTag);
-        
-        _cubeEnemy = _cubeEnemyObject.GetComponent<CubeEnemy>();
-    }
-
+ 
+    public int arrowDamage;
+   
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(_targetTag))
-        {
-            _cubeEnemy.Hit();
-            _cubeEnemy.TakeDamage(1);
+
+        if(other.gameObject.CompareTag("ArcherEnemy")){
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(arrowDamage);
             Destroy(gameObject);
-            
         }
+        
+        if(other.gameObject.CompareTag("Enemy")){
+            other.gameObject.GetComponent<CubeEnemy>().TakeDamage(arrowDamage);
+             other.gameObject.GetComponent<CubeEnemy>().Hit();
+             Destroy(gameObject);
+        }
+     
     }
 }

@@ -4,6 +4,11 @@ using UnityEngine.AI;
 
 public partial class Characterrr : MonoBehaviour
 {
+
+    // Inventory
+    private Inventory inventory;
+
+    // ^^^
     private CharacterController _cc;
     public float MoveSpeed = 5f;
     private Vector3 _movementVelocity;
@@ -34,6 +39,9 @@ public partial class Characterrr : MonoBehaviour
 
     private void Awake()
     {
+
+        inventory = new Inventory();
+
         _cc = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
 

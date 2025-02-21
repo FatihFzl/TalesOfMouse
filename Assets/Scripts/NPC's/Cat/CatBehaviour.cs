@@ -47,20 +47,14 @@ public class CatBehaviour : MonoBehaviour
                 StartCoroutine(GeriCekil());
             }
         }
-
-  
-        
-    
     }
+
+
 
     void TakipEt()
     {
-        
              transform.position = Vector3.MoveTowards(transform.position, player.position, takipHizi * Time.deltaTime);
              catAnim.SetBool("isRunning", true);
-        
-       
-    
     }
 
     void AtisYap()

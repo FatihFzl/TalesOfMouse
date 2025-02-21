@@ -22,6 +22,7 @@ public class CubeEnemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        damage = 5;
         health -= damage;
         
     }
