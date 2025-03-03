@@ -6,8 +6,8 @@ public partial class Characterrr : MonoBehaviour
 {
 
     // Inventory
-    private Inventory inventory;
-
+  private Inventory inventory;
+   [SerializeField] private UI_Inventory ui_Inventory;
     // ^^^
     private CharacterController _cc;
     public float MoveSpeed = 5f;
@@ -37,10 +37,13 @@ public partial class Characterrr : MonoBehaviour
 
     public CharacterState currentState;
 
-    private void Awake()
+    private void Update()
     {
 
-        inventory = new Inventory();
+         inventory = new Inventory();
+         ui_Inventory.SetInventory(inventory);
+
+        
 
         _cc = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
@@ -55,6 +58,18 @@ public partial class Characterrr : MonoBehaviour
         {
             _playerInput = GetComponent<PlayerInput>();
         }
+
+        PerformRoll();
+    }
+
+    // grab item
+     private void OnTriggerEnter(Collider itemCollider) {
+        ItemWorld itemWorld = itemCollider.GetComponent<ItemWorld>();
+        if(itemWorld != null){
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
+        
     }
 
     private void CalculatePlayerMovement()
@@ -94,10 +109,10 @@ public partial class Characterrr : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        PerformRoll();
-    }
+  //  private void Update()
+   // {
+    //    PerformRoll();
+   // }
 
     private void FixedUpdate()
     {
