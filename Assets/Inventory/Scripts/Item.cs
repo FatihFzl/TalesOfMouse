@@ -20,4 +20,12 @@ public class Item {
             case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
         }
     }
+
+    public bool IsStackable(){
+        switch(itemType){
+            default:
+            case ItemType.HealthPotion:
+              return true;
+        }
+    }
 }

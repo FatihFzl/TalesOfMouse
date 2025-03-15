@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 
 public class UI_Inventory : MonoBehaviour {
@@ -47,9 +47,12 @@ public class UI_Inventory : MonoBehaviour {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
-          //Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
-          // image.sprite = item.GetSprite();
-
+          Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
+           image.sprite = item.GetSprite();
+           TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>();
+           int newAmount = item.amount -1 ;
+           uiText.SetText(newAmount.ToString());
+           
             x++;
             if (x >= 4) {
                 x = 0;
