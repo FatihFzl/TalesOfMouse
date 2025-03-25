@@ -10,18 +10,22 @@ public class UI_Inventory : MonoBehaviour {
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
-   // private Player player;
+    private Characterrr player;
 
     private void Awake() {
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
     }
 
- // public void SetPlayer(Player player) {
-   //     this.player = player;
-  // }
+ public void SetCharacterrr(Characterrr player) {
+        this.player = player;
+   }
   
-  
+     public void Update(){
+         foreach (Item item in inventory.GetItemList()) {
+        inventory.UseItem(item);
+      }
+     }  
 
     public void SetInventory(Inventory inventory) {
         this.inventory = inventory;
@@ -46,12 +50,17 @@ public class UI_Inventory : MonoBehaviour {
         foreach (Item item in inventory.GetItemList()) {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
+
+            
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);
           Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
            image.sprite = item.GetSprite();
            TextMeshProUGUI uiText = itemSlotRectTransform.Find("text").GetComponent<TextMeshProUGUI>();
-           int newAmount = item.amount -1 ;
-           uiText.SetText(newAmount.ToString());
+           if (item.amount > 1) {
+                uiText.SetText(item.amount.ToString());
+            } else {
+                uiText.SetText("");
+            }
            
             x++;
             if (x >= 4) {

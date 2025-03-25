@@ -5,12 +5,19 @@ using UnityEngine.AI;
 public partial class Characterrr : MonoBehaviour
 {
 
+
+   
+    public static Characterrr Instance { get; private set; }
+
     // Inventory
   private Inventory inventory;
    [SerializeField] private UI_Inventory ui_Inventory;
     // ^^^
     private CharacterController _cc;
     public float MoveSpeed = 5f;
+    
+    public int currentHealth;
+    public int maxHealth = 100;
     private Vector3 _movementVelocity;
     private PlayerInput _playerInput;
 
@@ -37,12 +44,26 @@ public partial class Characterrr : MonoBehaviour
 
     public CharacterState currentState;
 
-    private void Update()
+
+     public void Awake(){
+         inventory = new Inventory(UseItem);
+        Instance = this;
+       
+         
+     }
+     public void Start(){
+        currentHealth = 50;
+         ui_Inventory.SetInventory(inventory);
+         ui_Inventory.SetCharacterrr(this);
+     }
+
+     
+    public void Update()
     {
 
-         inventory = new Inventory();
-         ui_Inventory.SetInventory(inventory);
-
+         
+         
+       
         
 
         _cc = GetComponent<CharacterController>();
@@ -60,17 +81,58 @@ public partial class Characterrr : MonoBehaviour
         }
 
         PerformRoll();
+     
+
+     
+         
     }
 
     // grab item
      private void OnTriggerEnter(Collider itemCollider) {
+      
         ItemWorld itemWorld = itemCollider.GetComponent<ItemWorld>();
         if(itemWorld != null){
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
+              
+        }
+       
+    }
+    
+
+
+    public void addHealth(){
+        if(currentHealth>=80){
+            currentHealth = 100;
+        }
+        if(currentHealth<80){
+            currentHealth +=20;
+        }
+    }
+
+    // use item
+     private void UseItem(Item item) {
+        if(Input.GetKeyDown(KeyCode.T)){
+            switch (item.itemType) {
+        case Item.ItemType.HealthPotion:
+            addHealth();
+          inventory.RemoveItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+            break;
+       }
+        }
+        if(Input.GetKeyDown(KeyCode.P)){
+            switch (item.itemType) {
+             case Item.ItemType.manaPotion:
+            addHealth();
+            inventory.RemoveItem(new Item { itemType = Item.ItemType.manaPotion, amount = 1 });
+            break;
+        }
         }
         
     }
+  
+
+    
 
     private void CalculatePlayerMovement()
     {
@@ -109,10 +171,7 @@ public partial class Characterrr : MonoBehaviour
         }
     }
 
-  //  private void Update()
-   // {
-    //    PerformRoll();
-   // }
+  
 
     private void FixedUpdate()
     {

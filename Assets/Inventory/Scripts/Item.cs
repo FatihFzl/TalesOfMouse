@@ -6,8 +6,10 @@ using UnityEngine;
 [Serializable]
 public class Item {
 
+
     public enum ItemType {
-        HealthPotion
+        HealthPotion,
+        manaPotion,
     }
 
     public ItemType itemType;
@@ -18,6 +20,7 @@ public class Item {
         switch(itemType){
             default:
             case ItemType.HealthPotion: return ItemAssets.Instance.healthPotionSprite;
+            case ItemType.manaPotion: return ItemAssets.Instance.manaPotionSprite;
         }
     }
 
@@ -26,6 +29,8 @@ public class Item {
             default:
             case ItemType.HealthPotion:
               return true;
+              case ItemType.manaPotion:
+              return false;
         }
     }
 }
