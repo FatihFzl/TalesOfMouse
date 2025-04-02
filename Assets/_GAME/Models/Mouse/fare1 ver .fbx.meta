@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 390a62708206d8a45827dd544ae5709c
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouse_armor
+    second: {fileID: 2100000, guid: 746a879b8dcda9a4b84b0a686abee78d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouse_body
+    second: {fileID: 2100000, guid: 0e40f99f24326194c9b745f66e591174, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: fare1 ver (Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 2
+      parentName: fare1 ver (Clone)
+      position: {x: -0.00001367135, y: 0.0086779725, z: 0.002796363}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: -0.066861145, y: -0.041117072, z: -0.066861145}
+    - name: body_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7252902e-11, y: 1.6875097e-17, z: 2.2351741e-10}
+      rotation: {x: -0.000000031664968, y: -0.0000000037252899, z: -9.313217e-10,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: chest_armor_back_low
+      parentName: fare1 ver (Clone)
+      position: {x: -1.8859282e-10, y: -3.725288e-11, z: 2.9802322e-10}
+      rotation: {x: -0.00000003725654, y: 2.9103803e-11, z: -2.0372679e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: chest_armor_front_low
+      parentName: fare1 ver (Clone)
+      position: {x: 2.4214386e-10, y: 2.7939671e-11, z: -5.1222748e-11}
+      rotation: {x: -0.000000034458935, y: 0.000000002328306, z: 0.0000000027939664,
+        w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: eyes_low
+      parentName: fare1 ver (Clone)
+      position: {x: -0, y: -1.3877787e-19, z: 1.0477437e-26}
+      rotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rope_bow_low
+      parentName: fare1 ver (Clone)
+      position: {x: -0, y: 3.7252906e-11, z: 3.7252892e-11}
+      rotation: {x: -0.0000000372529, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rope_low
+      parentName: fare1 ver (Clone)
+      position: {x: 9.297083e-11, y: 1.8626449e-10, z: -3.2596304e-11}
+      rotation: {x: -0.000000037252903, y: -3.469447e-18, z: 1.7347235e-18, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: sakal
+      parentName: fare1 ver (Clone)
+      position: {x: -0.00030619904, y: 0.009816916, z: 0.003512846}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.022347149, y: 0.022347149, z: 0.022347149}
+    - name: studs_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7468904e-12, y: 7.450581e-11, z: 1.3504178e-10}
+      rotation: {x: -0.000000037252907, y: -4.656613e-10, z: -9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tassel01_low
+      parentName: fare1 ver (Clone)
+      position: {x: 9.297083e-11, y: 1.8626449e-10, z: -3.2596304e-11}
+      rotation: {x: -0.000000037252903, y: -3.469447e-18, z: 1.7347235e-18, w: 1}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: tassel02_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7468904e-12, y: 7.450581e-11, z: 1.3504178e-10}
+      rotation: {x: -0.000000037252907, y: -4.656613e-10, z: -9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thigh_armor01_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7468904e-12, y: 7.450581e-11, z: 1.3504178e-10}
+      rotation: {x: -0.000000037252907, y: -4.656613e-10, z: -9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thigh_armor02_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7468904e-12, y: 7.450581e-11, z: 1.3504178e-10}
+      rotation: {x: -0.000000037252907, y: -4.656613e-10, z: -9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thigh_armor03_low
+      parentName: fare1 ver (Clone)
+      position: {x: -3.7468904e-12, y: 7.450581e-11, z: 1.3504178e-10}
+      rotation: {x: -0.000000037252907, y: -4.656613e-10, z: -9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thigh_armor_chains_low
+      parentName: fare1 ver (Clone)
+      position: {x: 6.519258e-10, y: -2.0489097e-10, z: -8.90577e-11}
+      rotation: {x: -0.000000038111466, y: 4.5111004e-10, z: 0.000000005820768, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: whiskers_low
+      parentName: fare1 ver (Clone)
+      position: {x: -0, y: -1.3877787e-19, z: 1.0477437e-26}
+      rotation: {x: -0.000000037748947, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
